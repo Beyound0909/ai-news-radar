@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Finance News Radar RSS</title>
+  </head>
+  <body>
+    <!-- A股 / China A-Shares -->
+    <outline text="A-Stocks / A股">
+      <outline
+        text="东方财富网"
+        title="东方财富网"
+        type="rss"
+        xmlUrl="https://feed.eastmoney.com/"
+        htmlUrl="https://www.eastmoney.com/"
+      />
+      <outline
+        text="新浪财经"
+        title="新浪财经"
+        type="rss"
+        xmlUrl="https://rss.sina.com.cn/"
+        htmlUrl="https://finance.sina.com.cn/"
+      />
+      <outline
+        text="36氪"
+        title="36氪"
+        type="rss"
+        xmlUrl="https://36kr.com/feed"
+        htmlUrl="https://36kr.com/"
+      />
+    </outline>
+
+    <!-- 港股 / HK Stocks -->
+    <outline text="HK Stocks / 港股">
+      <outline
+        text="AASTOCKS"
+        title="AASTOCKS"
+        type="rss"
+        xmlUrl="https://www.aastocks.com/tc/stocks/rss/aafn-news.xml"
+        htmlUrl="https://www.aastocks.com/"
+      />
+    </outline>
+
+    <!-- 美股 / US Stocks -->
+    <outline text="US Stocks / 美股">
+      <outline
+        text="MarketWatch Top Stories"
+        title="MarketWatch Top Stories"
+        type="rss"
+        xmlUrl="https://www.marketwatch.com/rss/topstories"
+        htmlUrl="https://www.marketwatch.com/"
+      />
+      <outline
+        text="MarketWatch Market Pulse"
+        title="MarketWatch Market Pulse"
+        type="rss"
+        xmlUrl="https://www.marketwatch.com/rss/marketpulse"
+        htmlUrl="https://www.marketwatch.com/"
+      />
+      <outline
+        text="CNBC News"
+        title="CNBC News"
+        type="rss"
+        xmlUrl="https://www.cnbc.com/id/100003114/device/rss/rss.html"
+        htmlUrl="https://www.cnbc.com/"
+      />
+      <outline
+        text="Nasdaq RSS"
+        title="Nasdaq RSS"
+        type="rss"
+        xmlUrl="https://www.nasdaq.com/feed/rssoutbound"
+        htmlUrl="https://www.nasdaq.com/"
+      />
+      <outline
+        text="Yahoo Finance"
+        title="Yahoo Finance"
+        type="rss"
+        xmlUrl="https://finance.yahoo.com/news/rssindex"
+        htmlUrl="https://finance.yahoo.com/"
+      />
+      <outline
+        text="Investing.com"
+        title="Investing.com"
+        type="rss"
+        xmlUrl="https://www.investing.com/rss/news_301.rss"
+        htmlUrl="https://www.investing.com/"
+      />
+    </outline>
+
+    <!-- 加密货币 / Crypto -->
+    <outline text="Crypto / 加密货币">
+      <outline
+        text="CoinDesk"
+        title="CoinDesk"
+        type="rss"
+        xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss"
+        htmlUrl="https://www.coindesk.com/"
+      />
+      <outline
+        text="CoinTelegraph"
+        title="CoinTelegraph"
+        type="rss"
+        xmlUrl="https://cointelegraph.com/rss"
+        htmlUrl="https://cointelegraph.com/"
+      />
+    </outline>
+
+    <!-- 全球宏观 / Global Macro -->
+    <outline text="Global Macro / 全球宏观">
+      <outline
+        text="Financial Times"
+        title="Financial Times"
+        type="rss"
+        xmlUrl="https://www.ft.com/rss/home"
+        htmlUrl="https://www.ft.com/"
+      />
+    </outline>
+
+    <!-- AI + Tech (retained from original) -->
+    <outline text="AI and Tech">
+      <outline
+        text="OpenAI News"
+        title="OpenAI News"
+        type="rss"
+        xmlUrl="https://openai.com/news/rss.xml"
+        htmlUrl="https://openai.com/news"
+      />
+      <outline
+        text="Hugging Face Blog"
+        title="Hugging Face Blog"
+        type="rss"
+        xmlUrl="https://huggingface.co/blog/feed.xml"
+        htmlUrl="https://huggingface.co/blog"
+      />
+      <outline
+        text="Google DeepMind Blog"
+        title="Google DeepMind Blog"
+        type="rss"
+        xmlUrl="https://deepmind.google/blog/rss.xml"
+        htmlUrl="https://deepmind.google/discover/blog/"
+      />
+      <outline
+        text="Google AI Blog"
+        title="Google AI Blog"
+        type="rss"
+        xmlUrl="https://blog.google/technology/ai/rss/"
+        htmlUrl="https://blog.google/technology/ai/"
+      />
+      <outline
+        text="Microsoft AI Blog"
+        title="Microsoft AI Blog"
+        type="rss"
+        xmlUrl="https://blogs.microsoft.com/ai/feed/"
+        htmlUrl="https://blogs.microsoft.com/ai/"
+      />
+      <outline
+        text="Simon Willison"
+        title="Simon Willison"
+        type="rss"
+        xmlUrl="https://simonwillison.net/atom/everything/"
+        htmlUrl="https://simonwillison.net/"
+      />
+    </outline>
+  </body>
+</opml>
