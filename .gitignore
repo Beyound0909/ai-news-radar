@@ -30,3 +30,7 @@ data/email-digest.json
 .DS_Store
 .idea/
 .vscode/
+
+# Large data files
+data/archive.json
+data/*.json
