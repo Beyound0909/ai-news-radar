@@ -1,84 +1,64 @@
 {
-  "generated_at": "2026-06-15T04:30:26.431613Z",
+  "generated_at": "2026-06-15T04:58:57.219442Z",
   "window_hours": 24,
   "total_items": 20,
   "items": [
     {
-      "story_id": "story_df359a3dfd9d",
-      "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
-      "url": "https://www.aibase.com/news/28912",
-      "primary_url": "https://www.aibase.com/news/28912",
+      "story_id": "story_ed21b8651e33",
+      "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
+      "url": "https://www.aibase.com/news/28902",
+      "primary_url": "https://www.aibase.com/news/28902",
       "source": "AIbase",
       "source_name": "AIbase",
       "sources": [
         {
-          "id": "aa29d1d34f448da5544df63e473f2f393eb33be9",
-          "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
-          "url": "https://www.aibase.com/news/28912",
+          "id": "791d62c4f8394fa97c3a2152ed0a269d48a76d63",
+          "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
+          "url": "https://www.aibase.com/news/28902",
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
-        },
-        {
-          "id": "1e87f0c613b44aa1d4210fb6d0d6cf0765b6cb3d",
-          "title": "AI 音乐视频创作新风向：立刻 MV 1. 1 版本实现「一键成片」跨越",
-          "url": "https://www.aibase.com/zh/news/28912",
-          "source": "Readhub · AI",
-          "source_name": "TopHub",
-          "site_id": "tophub",
-          "published_at": null
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
-      "source_count": 2,
+      "source_count": 1,
       "source_names": [
-        "AIbase",
-        "Readhub · AI"
+        "AIbase"
       ],
       "items": [
         {
-          "id": "aa29d1d34f448da5544df63e473f2f393eb33be9",
-          "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
-          "url": "https://www.aibase.com/news/28912",
+          "id": "791d62c4f8394fa97c3a2152ed0a269d48a76d63",
+          "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
+          "url": "https://www.aibase.com/news/28902",
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
-        },
-        {
-          "id": "1e87f0c613b44aa1d4210fb6d0d6cf0765b6cb3d",
-          "title": "AI 音乐视频创作新风向：立刻 MV 1. 1 版本实现「一键成片」跨越",
-          "url": "https://www.aibase.com/zh/news/28912",
-          "source": "Readhub · AI",
-          "source_name": "TopHub",
-          "site_id": "tophub",
-          "published_at": null
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
-      "item_count": 2,
-      "duplicate_count": 2,
-      "score": 0.837,
-      "importance": 0.837,
-      "importance_score": 0.837,
+      "item_count": 1,
+      "duplicate_count": 1,
+      "score": 0.812,
+      "importance": 0.812,
+      "importance_score": 0.812,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
         "recency": 1.0,
-        "story_heat": 0.25
+        "story_heat": 0.0
       },
       "category": "industry",
       "reasons": [
-        "multi_source",
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
-        "id": "aa29d1d34f448da5544df63e473f2f393eb33be9",
-        "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
-        "url": "https://www.aibase.com/news/28912",
+        "id": "791d62c4f8394fa97c3a2152ed0a269d48a76d63",
+        "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
+        "url": "https://www.aibase.com/news/28902",
         "source": "AIbase",
         "source_name": "AIbase"
       }
@@ -137,14 +117,14 @@
       ],
       "item_count": 2,
       "duplicate_count": 2,
-      "score": 0.8021,
-      "importance": 0.8021,
-      "importance_score": 0.8021,
+      "score": 0.7981,
+      "importance": 0.7981,
+      "importance_score": 0.7981,
       "importance_label": "官方更新",
       "importance_breakdown": {
         "source_tier": 1.0,
         "ai_relevance": 0.91,
-        "recency": 0.5205,
+        "recency": 0.5007,
         "story_heat": 0.25
       },
       "category": "official",
@@ -165,21 +145,21 @@
       }
     },
     {
-      "story_id": "story_ed21b8651e33",
-      "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
-      "url": "https://www.aibase.com/news/28902",
-      "primary_url": "https://www.aibase.com/news/28902",
+      "story_id": "story_6abf59010193",
+      "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
+      "url": "https://www.aibase.com/news/28907",
+      "primary_url": "https://www.aibase.com/news/28907",
       "source": "AIbase",
       "source_name": "AIbase",
       "sources": [
         {
-          "id": "791d62c4f8394fa97c3a2152ed0a269d48a76d63",
-          "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
-          "url": "https://www.aibase.com/news/28902",
+          "id": "fa8ca195d4383a9270d736d2a772e3d2c5b1b787",
+          "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
+          "url": "https://www.aibase.com/news/28907",
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -188,13 +168,13 @@
       ],
       "items": [
         {
-          "id": "791d62c4f8394fa97c3a2152ed0a269d48a76d63",
-          "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
-          "url": "https://www.aibase.com/news/28902",
+          "id": "fa8ca195d4383a9270d736d2a772e3d2c5b1b787",
+          "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
+          "url": "https://www.aibase.com/news/28907",
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -214,12 +194,12 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
-        "id": "791d62c4f8394fa97c3a2152ed0a269d48a76d63",
-        "title": "AI冲击初级岗位引发技术抵触，谷歌CEO呼吁重塑“乐观视角”",
-        "url": "https://www.aibase.com/news/28902",
+        "id": "fa8ca195d4383a9270d736d2a772e3d2c5b1b787",
+        "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
+        "url": "https://www.aibase.com/news/28907",
         "source": "AIbase",
         "source_name": "AIbase"
       }
@@ -259,14 +239,14 @@
       ],
       "item_count": 1,
       "duplicate_count": 1,
-      "score": 0.7744,
-      "importance": 0.7744,
-      "importance_score": 0.7744,
+      "score": 0.7705,
+      "importance": 0.7705,
+      "importance_score": 0.7705,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
-        "recency": 0.8122,
+        "recency": 0.7924,
         "story_heat": 0.0
       },
       "category": "industry",
@@ -285,21 +265,21 @@
       }
     },
     {
-      "story_id": "story_6abf59010193",
-      "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
-      "url": "https://www.aibase.com/news/28907",
-      "primary_url": "https://www.aibase.com/news/28907",
+      "story_id": "story_40b4b01e490b",
+      "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
+      "url": "https://www.aibase.com/news/28912",
+      "primary_url": "https://www.aibase.com/news/28912",
       "source": "AIbase",
       "source_name": "AIbase",
       "sources": [
         {
-          "id": "fa8ca195d4383a9270d736d2a772e3d2c5b1b787",
-          "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
-          "url": "https://www.aibase.com/news/28907",
+          "id": "aa29d1d34f448da5544df63e473f2f393eb33be9",
+          "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
+          "url": "https://www.aibase.com/news/28912",
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -308,13 +288,13 @@
       ],
       "items": [
         {
-          "id": "fa8ca195d4383a9270d736d2a772e3d2c5b1b787",
-          "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
-          "url": "https://www.aibase.com/news/28907",
+          "id": "aa29d1d34f448da5544df63e473f2f393eb33be9",
+          "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
+          "url": "https://www.aibase.com/news/28912",
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -334,12 +314,12 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
-        "id": "fa8ca195d4383a9270d736d2a772e3d2c5b1b787",
-        "title": "AI数据库交互迎来里程碑：谷歌新模型Gemini-SQL2 刷新行业标杆",
-        "url": "https://www.aibase.com/news/28907",
+        "id": "aa29d1d34f448da5544df63e473f2f393eb33be9",
+        "title": "AI音乐视频创作新风向：立刻MV 1. 1 版本实现“一键成片”跨越",
+        "url": "https://www.aibase.com/news/28912",
         "source": "AIbase",
         "source_name": "AIbase"
       }
@@ -379,14 +359,14 @@
       ],
       "item_count": 1,
       "duplicate_count": 1,
-      "score": 0.7744,
-      "importance": 0.7744,
-      "importance_score": 0.7744,
+      "score": 0.7705,
+      "importance": 0.7705,
+      "importance_score": 0.7705,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
-        "recency": 0.8122,
+        "recency": 0.7924,
         "story_heat": 0.0
       },
       "category": "industry",
@@ -419,7 +399,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -434,7 +414,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -454,8 +434,8 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
         "id": "702f26482b6462ca47826ef9153ba8e4c5667941",
         "title": "MiniMax陷入增长困境：一场关于涨价、解禁与市场信任的风暴",
@@ -499,14 +479,14 @@
       ],
       "item_count": 1,
       "duplicate_count": 1,
-      "score": 0.7744,
-      "importance": 0.7744,
-      "importance_score": 0.7744,
+      "score": 0.7705,
+      "importance": 0.7705,
+      "importance_score": 0.7705,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
-        "recency": 0.8122,
+        "recency": 0.7924,
         "story_heat": 0.0
       },
       "category": "industry",
@@ -539,7 +519,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -554,7 +534,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -574,8 +554,8 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
         "id": "cb0b2038544f7251a4c390fbe78b7f8016bc4ed4",
         "title": "​OpenAI斥资1. 5 亿美元启动合作伙伴网络，全面加速企业AI转型",
@@ -619,14 +599,14 @@
       ],
       "item_count": 1,
       "duplicate_count": 1,
-      "score": 0.7744,
-      "importance": 0.7744,
-      "importance_score": 0.7744,
+      "score": 0.7705,
+      "importance": 0.7705,
+      "importance_score": 0.7705,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
-        "recency": 0.8122,
+        "recency": 0.7924,
         "story_heat": 0.0
       },
       "category": "industry",
@@ -659,7 +639,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -674,7 +654,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -694,8 +674,8 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
         "id": "388aa69452cd363a56fcd66320d384ad7cd8ca72",
         "title": "​用满 200 刀订阅能吃掉1. 4 万刀算力？大模型巨头正面临严峻的成本风暴",
@@ -739,14 +719,14 @@
       ],
       "item_count": 1,
       "duplicate_count": 1,
-      "score": 0.7744,
-      "importance": 0.7744,
-      "importance_score": 0.7744,
+      "score": 0.7705,
+      "importance": 0.7705,
+      "importance_score": 0.7705,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
-        "recency": 0.8122,
+        "recency": 0.7924,
         "story_heat": 0.0
       },
       "category": "industry",
@@ -779,7 +759,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -794,7 +774,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -814,8 +794,8 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
         "id": "d8304bd5e32ee3c73778733ab3d81b8c45bf0503",
         "title": "​科大讯飞AI眼镜正式开启预售 搭载多语种翻译与全能AI助理",
@@ -878,14 +858,14 @@
       ],
       "item_count": 2,
       "duplicate_count": 2,
-      "score": 0.6278,
-      "importance": 0.6278,
-      "importance_score": 0.6278,
+      "score": 0.6239,
+      "importance": 0.6239,
+      "importance_score": 0.6239,
       "importance_label": "值得关注",
       "importance_breakdown": {
         "source_tier": 0.5,
         "ai_relevance": 0.69,
-        "recency": 0.9792,
+        "recency": 0.9593,
         "story_heat": 0.25
       },
       "category": "watch",
@@ -937,14 +917,14 @@
       ],
       "item_count": 1,
       "duplicate_count": 1,
-      "score": 0.7744,
-      "importance": 0.7744,
-      "importance_score": 0.7744,
+      "score": 0.7705,
+      "importance": 0.7705,
+      "importance_score": 0.7705,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
-        "recency": 0.8122,
+        "recency": 0.7924,
         "story_heat": 0.0
       },
       "category": "industry",
@@ -977,7 +957,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -992,7 +972,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -1012,8 +992,8 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
         "id": "b4dcdcf309ea5253ef16a77988d0328d4591c580",
         "title": "​美国出口管制影响 Anthropic AI 模型，欧盟积极评估应对措施",
@@ -1057,14 +1037,14 @@
       ],
       "item_count": 1,
       "duplicate_count": 1,
-      "score": 0.7744,
-      "importance": 0.7744,
-      "importance_score": 0.7744,
+      "score": 0.7705,
+      "importance": 0.7705,
+      "importance_score": 0.7705,
       "importance_label": "行业动态",
       "importance_breakdown": {
         "source_tier": 0.78,
         "ai_relevance": 1.0,
-        "recency": 0.8122,
+        "recency": 0.7924,
         "story_heat": 0.0
       },
       "category": "industry",
@@ -1136,14 +1116,14 @@
       ],
       "item_count": 2,
       "duplicate_count": 2,
-      "score": 0.6158,
-      "importance": 0.6158,
-      "importance_score": 0.6158,
+      "score": 0.6119,
+      "importance": 0.6119,
+      "importance_score": 0.6119,
       "importance_label": "值得关注",
       "importance_breakdown": {
         "source_tier": 0.5,
         "ai_relevance": 0.65,
-        "recency": 0.9792,
+        "recency": 0.9594,
         "story_heat": 0.25
       },
       "category": "watch",
@@ -1214,14 +1194,14 @@
       ],
       "item_count": 2,
       "duplicate_count": 2,
-      "score": 0.5821,
-      "importance": 0.5821,
-      "importance_score": 0.5821,
+      "score": 0.5782,
+      "importance": 0.5782,
+      "importance_score": 0.5782,
       "importance_label": "值得关注",
       "importance_breakdown": {
         "source_tier": 0.5,
         "ai_relevance": 0.65,
-        "recency": 0.8107,
+        "recency": 0.7909,
         "story_heat": 0.25
       },
       "category": "watch",
@@ -1229,7 +1209,7 @@
         "multi_source"
       ],
       "earliest_at": "2026-06-14T23:57:48Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
         "id": "ac507eef8cbfed6bf7d95e173972afecd5e43f6b",
         "title": "8点1氪丨诺奖得主称马斯克是庞氏骗局；SK海力士去年新增员工超2000人；人形机器人U1仅限成人购买",
@@ -1253,7 +1233,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "source_count": 1,
@@ -1268,7 +1248,7 @@
           "source": "AIbase",
           "source_name": "AIbase",
           "site_id": "aibase",
-          "published_at": "2026-06-15T04:30:26.431613Z"
+          "published_at": "2026-06-15T04:58:57.219442Z"
         }
       ],
       "item_count": 1,
@@ -1288,8 +1268,8 @@
         "high_ai_relevance",
         "high_importance"
       ],
-      "earliest_at": "2026-06-15T04:30:26.431613Z",
-      "latest_at": "2026-06-15T04:30:26.431613Z",
+      "earliest_at": "2026-06-15T04:58:57.219442Z",
+      "latest_at": "2026-06-15T04:58:57.219442Z",
       "primary_item": {
         "id": "57f28feda17fad83965fae48e62fae5f8e0defcc",
         "title": "​苹果或推系统级AI代理：全面代劳复杂操作，Apple One订阅或迎重大升级",
