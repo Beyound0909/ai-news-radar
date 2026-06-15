@@ -76,8 +76,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Pull latest changes to avoid push conflicts
-          git pull --rebase origin master
+          # Sync to remote state to avoid push conflicts (overwrites local changes)
+          git fetch origin master
+          git reset --hard origin/master
           # Stage the whole data dir so newly added output files can never be
           # silently dropped again (the daily-brief/stories-merged freeze was
           # caused by a stale filename whitelist here). .gitignore keeps
