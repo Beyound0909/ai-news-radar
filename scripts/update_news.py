@@ -28,9 +28,9 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 try:
-    from scripts.ai_relevance import add_ai_relevance_fields, score_ai_relevance
+    from scripts.ai_relevance import add_ai_relevance_fields, score_ai_relevance, add_finance_relevance_fields
 except ModuleNotFoundError:  # pragma: no cover - direct `python scripts/update_news.py`
-    from ai_relevance import add_ai_relevance_fields, score_ai_relevance
+    from ai_relevance import add_ai_relevance_fields, score_ai_relevance, add_finance_relevance_fields
 
 try:
     import feedparser
@@ -3483,6 +3483,49 @@ def build_daily_brief_payload(
         "items": items,
     }
 
+def build_finance_brief_payload(
+    items: list[dict[str, Any]],
+    generated_at: str,
+    window_hours: int,
+    max_items: int = 20,
+) -> dict[str, Any]:
+    """Build a finance-focused daily brief from raw news items."""
+    scored = []
+    for item in items:
+        enriched = add_finance_relevance_fields(dict(item))
+        score = enriched.get("finance_score", 0)
+        if score >= 0.4:
+            scored.append((-score, enriched))
+    scored.sort(key=lambda x: x[0])
+    scored = [item for _, item in scored]
+    
+    selected: list[dict[str, Any]] = []
+    source_count: dict[str, int] = {}
+    selected_urls: set[str] = set()
+    
+    for item in scored:
+        url = item.get("url", "")
+        source = item.get("source", "")
+        if source_count.get(source, 0) >= 2:
+            continue
+        if url in selected_urls:
+            continue
+        selected.append(item)
+        source_count[source] = source_count.get(source, 0) + 1
+        selected_urls.add(url)
+        if len(selected) >= max_items:
+            break
+    
+    return {
+        "generated_at": generated_at,
+        "window_hours": window_hours,
+        "total_items": len(selected),
+        "items": selected,
+        "topic_filter": "finance_relevance_v1",
+        "source": "ai-news-radar finance edition",
+    }
+
+
 
 def build_stories_payload(
     stories: list[dict[str, Any]],
@@ -3544,6 +3587,7 @@ def main() -> int:
     latest_all_path = output_dir / "latest-24h-all.json"
     status_path = output_dir / "source-status.json"
     daily_brief_path = output_dir / "daily-brief.json"
+    finance_brief_path = output_dir / "daily-brief-finance.json"
     stories_merged_path = output_dir / "stories-merged.json"
     merge_log_path = output_dir / "merge-log.json"
     waytoagi_path = output_dir / "waytoagi-7d.json"
@@ -3694,6 +3738,7 @@ def main() -> int:
     stories, merge_events = merge_story_items(latest_items_ai_dedup, now=now, window_hours=args.window_hours)
     generated_at = iso(now)
     daily_brief_payload = build_daily_brief_payload(stories, generated_at=generated_at, window_hours=args.window_hours)
+    finance_brief_payload = build_finance_brief_payload(latest_items, generated_at=generated_at, window_hours=args.window_hours)
     stories_merged_payload = build_stories_payload(stories, generated_at=generated_at, window_hours=args.window_hours)
     merge_log_payload = build_merge_log_payload(merge_events, generated_at=generated_at)
 
@@ -3823,6 +3868,10 @@ def main() -> int:
         json.dumps(sanitize_public_payload(daily_brief_payload), ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    finance_brief_path.write_text(
+        json.dumps(sanitize_public_payload(finance_brief_payload), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     stories_merged_path.write_text(
         json.dumps(sanitize_public_payload(stories_merged_payload), ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
@@ -3847,6 +3896,7 @@ def main() -> int:
     print(f"Wrote: {latest_path} ({len(latest_items)} items)")
     print(f"Wrote: {latest_all_path} ({len(latest_items_all_dedup)} all-mode items)")
     print(f"Wrote: {daily_brief_path} ({daily_brief_payload.get('total_items', 0)} brief items)")
+    print(f"Wrote: {finance_brief_path} ({finance_brief_payload.get('total_items', 0)} finance brief items)")
     print(f"Wrote: {stories_merged_path} ({stories_merged_payload.get('total_stories', 0)} stories)")
     print(f"Wrote: {merge_log_path} ({len(merge_events)} merge events)")
     print(f"Wrote: {archive_path} ({len(archive)} items)")

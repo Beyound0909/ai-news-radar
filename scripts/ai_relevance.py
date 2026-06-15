@@ -558,3 +558,149 @@ def add_ai_relevance_fields(record: dict[str, Any]) -> dict[str, Any]:
     out["ai_signals"] = relevance["signals"]
     out["ai_noise"] = relevance["noise"]
     return out
+
+
+# ─── Finance Relevance Scoring ────────────────────────────────────────────────
+
+FINANCE_TIER1_DOMAINS = frozenset({
+    "ft.com", "www.ft.com", "financialtimes.com",
+    "bloomberg.com", "www.bloomberg.com", "bloomberg.cn",
+    "reuters.com", "www.reuters.com", "reut.rs",
+    "wsj.com", "www.wsj.com", "cn.wsj.com",
+    "economist.com", "www.economist.com",
+    "barrons.com", "www.barrons.com",
+    "cnbc.com", "www.cnbc.com",
+    "nasdaq.com", "www.nasdaq.com",
+    "marketwatch.com", "www.marketwatch.com",
+    "investing.com", "www.investing.com",
+    "seekingalpha.com", "www.seekingalpha.com",
+    "finance.yahoo.com", "news.yahoo.com",
+    "coindesk.com", "www.coindesk.com",
+    "cointelegraph.com", "www.cointelegraph.com",
+})
+
+FINANCE_TIER2_DOMAINS = frozenset({
+    "36kr.com", "www.36kr.com",
+    "huxiu.com", "www.huxiu.com",
+    "eastmoney.com", "www.eastmoney.com",
+    "sina.com.cn", "finance.sina.com.cn",
+    "sohu.com", "stock.sohu.com",
+    "ifeng.com", "finance.ifeng.com",
+    "cls.cn", "www.cls.cn",
+    "aastocks.com", "www.aastocks.com",
+    "sth.eastmoney.com",
+})
+
+FINANCE_CORE_KEYWORDS = [
+    "A股", "港股", "美股", "沪深", "创业板", "科创板", "北交所", "新三板",
+    "上证", "深证", "沪深300", "上证50", "中证500", "中证1000",
+    "上证指数", "深证成指", "创业板指", "科创50",
+    "大盘", "指数", "成分股", "权重股", "蓝筹", "白马",
+    "涨停", "跌停", "停牌", "复牌", "涨跌停",
+    "IPO", "上市", "退市", "打新",
+    "财报", "营收", "净利", "利润", "盈利", "亏损",
+    "回购", "增持", "减持", "分红", "派息", "送股",
+    "大宗交易", "龙虎榜", "机构持仓", "北向资金", "南向资金",
+    "沪股通", "深股通", "北上资金", "南下资金",
+    "融资融券", "两融", "爆仓", "平仓", "保证金",
+    "期货", "期权", "原油", "黄金",
+    "国债", "地方债", "企业债", "信用债", "可转债",
+    "降息", "加息", "利率", "通胀", "CPI", "PPI", "GDP",
+    "美联储", "FOMC", "央行", "货币政策", "财政政策",
+    "人民币", "美元", "欧元", "英镑", "日元", "汇率", "外汇",
+    "比特币", "以太坊", "加密货币", "数字货币", "区块链", "Web3",
+    "DeFi", "NFT", "稳定币", "币圈", "山寨币",
+    "做多", "做空", "多头", "空头", "牛市", "熊市", "震荡",
+    "研报", "评级", "目标价", "买入", "卖出", "持有",
+    "并购", "重组", "收购", "私有化", "要约",
+    "解禁", "限售股", "大股东", "实控人",
+    "净流入", "净流出", "主力资金", "散户资金",
+    "stock", "equity", "shares", "dividend", "earnings",
+    "bitcoin", "ethereum", "crypto", "blockchain",
+    "federal reserve", "inflation", "recession",
+    "market cap", "valuation", "buyback",
+    "bull market", "bear market", "wall street", "fintech",
+    "nasdaq", "nyse", "dow jones", "s&p 500",
+]
+
+FINANCE_NOISE = [
+    "配资", "荐股", "黑马", "翻倍", "打板",
+    "龙头股", "强势股", "内幕", "老鼠仓", "割韭菜",
+    "热销", "促销", "优惠券",
+]
+
+FINANCE_EN_RE = __import__('re').compile(
+    r"(?i)(?<![a-z0-9])(stock|equity|shares|ipo|earnings|dividend|revenue"
+    r"|bull|bear|fed|inflation|cpi|gdp|nasdaq|nyse"
+    r"|bitcoin|ethereum|crypto|blockchain"
+    r"|market cap|valuation|buyback)(?![a-z0-9])"
+)
+
+def score_finance_relevance(record):
+    from urllib.parse import urlparse
+    url = str(record.get("url") or "")
+    title = str(record.get("title") or "")
+    site_id = str(record.get("site_id") or "")
+    try:
+        domain = urlparse(url).netloc.lower()
+    except Exception:
+        domain = ""
+
+    tier1_hit = any(d in domain for d in ("ft.com","bloomberg.com","reuters.com","wsj.com",
+        "economist.com","barrons.com","cnbc.com","nasdaq.com","marketwatch.com",
+        "investing.com","seekingalpha.com","coindesk.com","cointelegraph.com"))
+    tier2_hit = any(d in domain for d in ("36kr.com","huxiu.com","eastmoney.com",
+        "sina.com.cn","sohu.com","ifeng.com","cls.cn","aastocks.com","finance.yahoo.com"))
+    
+    if tier1_hit:
+        score = 0.75
+        signals = [f"t1:{domain}"]
+    elif tier2_hit:
+        score = 0.65
+        signals = [f"t2:{domain}"]
+    else:
+        score = 0.0
+        signals = []
+
+    kw_matches = [kw for kw in FINANCE_CORE_KEYWORDS if kw.lower() in title.lower()]
+    score += min(len(kw_matches) * 0.07, 0.21)
+    signals.extend([f"kw:{k}" for k in kw_matches[:5]])
+
+    en_count = len(FINANCE_EN_RE.findall(title))
+    if en_count > 0:
+        score += min(en_count * 0.05, 0.10)
+        signals.append(f"en:{en_count}")
+
+    noise = [k for k in FINANCE_NOISE if k in title]
+    if noise:
+        score -= 0.20
+        signals.append(f"noise:{noise[0]}")
+
+    score = max(0.0, min(1.0, score))
+
+    if score >= 0.7:
+        label = "finance_breaking"
+    elif score >= 0.5:
+        label = "finance_relevant"
+    elif score >= 0.3:
+        label = "finance_related"
+    else:
+        label = "finance_noise"
+
+    return {
+        "finance_score": round(score, 3),
+        "finance_label": label,
+        "finance_reason": f"{len(kw_matches)} keywords / {domain}",
+        "finance_signals": signals[:8],
+        "finance_noise": noise,
+    }
+
+def add_finance_relevance_fields(record):
+    r = score_finance_relevance(record)
+    out = dict(record)
+    out["finance_score"] = r["finance_score"]
+    out["finance_label"] = r["finance_label"]
+    out["finance_reason"] = r["finance_reason"]
+    out["finance_signals"] = r["finance_signals"]
+    out["finance_noise"] = r["finance_noise"]
+    return out
