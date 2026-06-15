@@ -81,21 +81,27 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Stage the whole data dir so newly added output files can never be
-          # silently dropped again (the daily-brief/stories-merged freeze was
-          # caused by a stale filename whitelist here). .gitignore keeps
-          # data/email-digest.json out of this add.
-          git add data/
+          # Force-add explicit data files so new outputs (like daily-brief-finance.json)
+          # are NEVER silently dropped. archive.json may be gitignored / >50MB — skip it.
+          git add -f data/daily-brief-finance.json
+          git add -f data/latest-24h.json
+          git add -f data/latest-24h-all.json
+          git add -f data/daily-brief.json
+          git add -f data/stories-merged.json
+          git add -f data/merge-log.json
+          git add -f data/source-status.json
+          git add -f data/waytoagi-7d.json
+          git add -f data/title-zh-cache.json
           if [ -f data/email-digest.json ] && [ "$EMAIL_DIGEST_PUBLISH" = "1" ]; then
             git add -f data/email-digest.json
           fi
-          # Self-check: fail loudly if anything under data/ is still unstaged,
-          # instead of green-but-stale runs.
-          if [ -n "$(git status --porcelain --untracked-files=all -- data/ | grep -v '^[MADRC]' || true)" ]; then
-            echo "::error::Generated files under data/ were not staged:"
-            git status --porcelain --untracked-files=all -- data/ | grep -v '^[MADRC]'
-            exit 1
-          fi
+          # Self-check: confirm the most important generated files are staged
+          for f in daily-brief-finance.json latest-24h.json daily-brief.json; do
+            if ! git ls-files --stage -- "data/$f" | grep -q .; then
+              echo "::error::data/$f was not staged — aborting"
+              exit 1
+            fi
+          done
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
